@@ -3,17 +3,6 @@
 let url_1 = 'https://jsonplaceholder.typicode.com/posts'
 let url_2 = 'https://jsonplaceholder.typicode.com/users'
 
-const ob_0 = {
-  server: 'soua-ta',
-  port: 1200,
-  adressServer: {
-    country: 'Spain',
-    town: 'Madrid',
-  },
-  code: 429600846,
-  dev: 'evsem',
-}
-
 const array_All = [76, 34, 0, 1, 771]
 
 let prom_Pr = new Promise((res, rej) => {
@@ -92,3 +81,30 @@ let prom_Pr = new Promise((res, rej) => {
   .catch((err) => {
     console.error(err)
   })
+
+class Info {
+  constructor(array, object, string) {
+    this.array = array
+    this.object = object
+    this.string = string
+  }
+}
+let infoStudent = new Info([0, 1, 13], { name: 'Alex', age: 27 }, 'Hello World')
+console.log(infoStudent)
+
+const ob_0 = {
+  server: 'soua-ta',
+  port: 1200,
+  adressServer: {
+    country: 'Spain',
+    town: 'Madrid',
+  },
+  code: 429600846,
+  dev: 'evsem',
+}
+const { server, code } = ob_0
+console.log(server, code)
+
+const dest_array = [34, 67, 901, 772]
+let [zero, one, , three] = dest_array
+console.log(one)
