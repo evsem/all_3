@@ -1,0 +1,16 @@
+{
+  "name": "all_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "unit"
+  },
+  "keywords": [
+    "js",
+    "npm",
+    "web"
+  ],
+  "author": "evsem",
+  "license": "ISC"
+}
