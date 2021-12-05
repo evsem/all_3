@@ -41,6 +41,54 @@ let prom_Pr = new Promise((res, rej) => {
       }
     }
     fun_inProm_1(91)
-    res()
+    res(array_inProm)
   }, 3000)
 })
+  .then((array_inThem_1) => {
+    setTimeout(() => {
+      return new Promise((res, rej) => {
+        setTimeout(() => {
+          let array_filt = array_inThem_1.filter((item) => {
+            return item > 30 && item < 300
+          })
+          console.log(array_filt)
+          res()
+        }, 2000)
+      })
+    })
+  })
+  .then(() => {
+    setTimeout(() => {
+      function fun_inThem_1(a, b, c) {
+        let arrayFunThem = [a, b, c]
+        const a_Fun = a
+
+        for (let i = 3; i < a_Fun; i++) {
+          if (i == 9) {
+            continue
+          }
+          console.log(i)
+        }
+
+        arrayFunThem.unshift('aEx', 56, 101)
+        console.log(arrayFunThem)
+
+        const ob_FunThem = {
+          number_1: a_Fun,
+          number_2: b,
+          number_3: c,
+          arr: [0, 1],
+        }
+
+        if (ob_FunThem.number_3 > b) {
+          console.log(ob_FunThem.number_3)
+        } else {
+          console.error('Error in array')
+        }
+      }
+      fun_inThem_1(13, 12, 22)
+    }, 3000)
+  })
+  .catch((err) => {
+    console.error(err)
+  })
